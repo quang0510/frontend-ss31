@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #container {
+      border: 1px solid black;
+    }
+    .color {
+      padding: 10px;
+      display: flex;
+      gap: 8px;
+    }
+    #green {
+      width: 80px;
+      height: 80px;
+      background-color: green;
+      border: 2px solid black;
+    }
+    #red {
+      width: 80px;
+      height: 80px;
+      background-color: red;
+      border: 2px solid black;
+    }
+    #purple {
+      width: 80px;
+      height: 80px;
+      background-color: purple;
+      border: 2px solid black;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <p>change background-color</p>
+      <h4>Mouse click</h4>
+      <div class="color">
+        <div id="green">Xanh</div>
+        <div id="red">Đỏ</div>
+        <div id="purple">Tím</div>
+      </div>
+    </div>
+    <script>
+      let container = document.querySelector("#container");
+      let green = document.querySelector("#green");
+      let red = document.querySelector("#red");
+      let purple = document.querySelector("#purple");
+
+      green.addEventListener("click", function () {
+        container.style.backgroundColor = "green";
+      });
+      red.addEventListener("click", function () {
+        container.style.backgroundColor = "red";
+      });
+      purple.addEventListener("click", function () {
+        container.style.backgroundColor = "purple";
+      });
+    </script>
+  </body>
+</html>
